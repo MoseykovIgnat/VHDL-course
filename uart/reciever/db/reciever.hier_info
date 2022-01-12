@@ -1,0 +1,90 @@
+|reciever
+clk_i => Main_PLL:PLL.inclk0
+o_status_idle <= p_status~0.DB_MAX_OUTPUT_PORT_TYPE
+o_status_start_bit <= p_status~1.DB_MAX_OUTPUT_PORT_TYPE
+o_status_rx_data_bits <= p_status~2.DB_MAX_OUTPUT_PORT_TYPE
+o_status_rx_stop_bit <= p_status~4.DB_MAX_OUTPUT_PORT_TYPE
+o_status_rx_clean_up <= p_status~5.DB_MAX_OUTPUT_PORT_TYPE
+o_status_rx_parity_bit <= p_status~3.DB_MAX_OUTPUT_PORT_TYPE
+i_RX_Serial => r_RX_Data_R.DATAIN
+o_RX_DV <= r_RX_DV.DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[0] <= r_RX_Byte[0].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[1] <= r_RX_Byte[1].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[2] <= r_RX_Byte[2].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[3] <= r_RX_Byte[3].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[4] <= r_RX_Byte[4].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[5] <= r_RX_Byte[5].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[6] <= r_RX_Byte[6].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_Byte[7] <= r_RX_Byte[7].DB_MAX_OUTPUT_PORT_TYPE
+o_RX_parity_bit_from_serial <= r_RX_Parity_From_DV.DB_MAX_OUTPUT_PORT_TYPE
+o_RX_parity_bit_calculated <= r_RX_Calculated_Parity.DB_MAX_OUTPUT_PORT_TYPE
+o_RX_is_parity_equel <= r_RX_is_parity_equel.DB_MAX_OUTPUT_PORT_TYPE
+o_RX_start_bit_accepted <= r_RX_start_bit_accepted.DB_MAX_OUTPUT_PORT_TYPE
+o_RX_stop_bit_accepted <= r_RX_stop_bit_accepted.DB_MAX_OUTPUT_PORT_TYPE
+o_RX_curr_clock <= Main_PLL:PLL.c0
+
+
+|reciever|Main_PLL:PLL
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|reciever|Main_PLL:PLL|altpll:altpll_component
+inclk[0] => pll.CLK
+inclk[1] => ~NO_FANOUT~
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <= <GND>
+clk[0] <= clk[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= <GND>
+clk[2] <= <GND>
+clk[3] <= <GND>
+clk[4] <= <GND>
+clk[5] <= <GND>
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= sclkout1~0.DB_MAX_OUTPUT_PORT_TYPE
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+
+

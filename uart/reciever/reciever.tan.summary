@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.705 ns
+From           : i_RX_Serial
+To             : r_RX_Data_R
+From Clock     : --
+To Clock       : clk_i
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 5.783 ns
+From           : r_RX_Byte[1]
+To             : o_RX_Byte[1]
+From Clock     : clk_i
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -6.457 ns
+From           : i_RX_Serial
+To             : r_RX_Data_R
+From Clock     : --
+To Clock       : clk_i
+Failed Paths   : 0
+
+Type           : Clock Setup: 'Main_PLL:PLL|altpll:altpll_component|_clk0'
+Slack          : 4.788 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : 191.86 MHz ( period = 5.212 ns )
+From           : r_Clk_Count[5]
+To             : r_RX_Byte[2]
+From Clock     : Main_PLL:PLL|altpll:altpll_component|_clk0
+To Clock       : Main_PLL:PLL|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'Main_PLL:PLL|altpll:altpll_component|_clk0'
+Slack          : 0.445 ns
+Required Time  : 100.00 MHz ( period = 10.000 ns )
+Actual Time    : N/A
+From           : r_RX_Calculated_Parity
+To             : r_RX_Calculated_Parity
+From Clock     : Main_PLL:PLL|altpll:altpll_component|_clk0
+To Clock       : Main_PLL:PLL|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

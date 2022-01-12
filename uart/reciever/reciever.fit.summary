@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Dec 15 20:02:51 2021
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : reciever
+Top-level Entity Name : reciever
+Family : Cyclone II
+Device : EP2C20F484C7
+Timing Models : Final
+Total logic elements : 84 / 18,752 ( < 1 % )
+    Total combinational functions : 83 / 18,752 ( < 1 % )
+    Dedicated logic registers : 32 / 18,752 ( < 1 % )
+Total registers : 32
+Total pins : 23 / 315 ( 7 % )
+Total virtual pins : 0
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

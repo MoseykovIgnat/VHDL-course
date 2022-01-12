@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Dec 15 20:02:48 2021
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : reciever
+Top-level Entity Name : reciever
+Family : Cyclone II
+Total logic elements : 83
+    Total combinational functions : 83
+    Dedicated logic registers : 32
+Total registers : 32
+Total pins : 23
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

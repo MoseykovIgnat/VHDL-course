@@ -1,0 +1,91 @@
+|uart_transmitter
+clk_i => Main_PLL:PLL.inclk0
+i_TX_DV => Selector14.IN3
+i_TX_DV => r_TX_Data~7.OUTPUTSELECT
+i_TX_DV => r_TX_Data~6.OUTPUTSELECT
+i_TX_DV => r_TX_Data~5.OUTPUTSELECT
+i_TX_DV => r_TX_Data~4.OUTPUTSELECT
+i_TX_DV => r_TX_Data~3.OUTPUTSELECT
+i_TX_DV => r_TX_Data~2.OUTPUTSELECT
+i_TX_DV => r_TX_Data~1.OUTPUTSELECT
+i_TX_DV => r_TX_Data~0.OUTPUTSELECT
+i_TX_DV => Selector13.IN2
+i_TX_Byte[0] => r_TX_Data~7.DATAB
+i_TX_Byte[1] => r_TX_Data~6.DATAB
+i_TX_Byte[2] => r_TX_Data~5.DATAB
+i_TX_Byte[3] => r_TX_Data~4.DATAB
+i_TX_Byte[4] => r_TX_Data~3.DATAB
+i_TX_Byte[5] => r_TX_Data~2.DATAB
+i_TX_Byte[6] => r_TX_Data~1.DATAB
+i_TX_Byte[7] => r_TX_Data~0.DATAB
+o_TX_Active <= o_TX_Active~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_TX_Serial <= o_TX_Serial~reg0.DB_MAX_OUTPUT_PORT_TYPE
+o_curr_clock <= Main_PLL:PLL.c0
+o_checker_parity <= r_TX_Parity.DB_MAX_OUTPUT_PORT_TYPE
+o_TX_Done <= r_TX_Done.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart_transmitter|Main_PLL:PLL
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|uart_transmitter|Main_PLL:PLL|altpll:altpll_component
+inclk[0] => pll.CLK
+inclk[1] => ~NO_FANOUT~
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <= <GND>
+clk[0] <= clk[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= <GND>
+clk[2] <= <GND>
+clk[3] <= <GND>
+clk[4] <= <GND>
+clk[5] <= <GND>
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= sclkout1~0.DB_MAX_OUTPUT_PORT_TYPE
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+
+

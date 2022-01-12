@@ -1,0 +1,278 @@
+Simulator report for uart_transmitter
+Wed Dec 29 01:04:10 2021
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 us     ;
+; Simulation Netlist Size     ; 88 nodes     ;
+; Simulation Coverage         ;      79.79 % ;
+; Total Number of Transitions ; 100906       ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      79.79 % ;
+; Total nodes checked                                 ; 88           ;
+; Total output ports checked                          ; 94           ;
+; Total output ports with complete 1/0-value coverage ; 75           ;
+; Total output ports with no 1/0-value coverage       ; 14           ;
+; Total output ports with no 1-value coverage         ; 14           ;
+; Total output ports with no 0-value coverage         ; 19           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                    ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+; Node Name                                                            ; Output Port Name                                                     ; Output Port Type ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+; |uart_transmitter|Main_PLL:PLL|altpll:altpll_component|pll           ; |uart_transmitter|Main_PLL:PLL|altpll:altpll_component|_clk0         ; clk0             ;
+; |uart_transmitter|r_Clk_Count[0]                                     ; |uart_transmitter|r_Clk_Count[0]                                     ; regout           ;
+; |uart_transmitter|r_Clk_Count[1]                                     ; |uart_transmitter|r_Clk_Count[1]                                     ; regout           ;
+; |uart_transmitter|r_Clk_Count[2]                                     ; |uart_transmitter|r_Clk_Count[2]                                     ; regout           ;
+; |uart_transmitter|r_Clk_Count[3]                                     ; |uart_transmitter|r_Clk_Count[3]                                     ; regout           ;
+; |uart_transmitter|r_Clk_Count[4]                                     ; |uart_transmitter|r_Clk_Count[4]                                     ; regout           ;
+; |uart_transmitter|r_Clk_Count[6]                                     ; |uart_transmitter|r_Clk_Count[6]                                     ; regout           ;
+; |uart_transmitter|r_Clk_Count[5]                                     ; |uart_transmitter|r_Clk_Count[5]                                     ; regout           ;
+; |uart_transmitter|r_Clk_Count[0]~136                                 ; |uart_transmitter|r_Clk_Count[0]~136                                 ; combout          ;
+; |uart_transmitter|r_Clk_Count[0]~136                                 ; |uart_transmitter|r_Clk_Count[0]~137                                 ; cout             ;
+; |uart_transmitter|r_Clk_Count[1]~139                                 ; |uart_transmitter|r_Clk_Count[1]~139                                 ; combout          ;
+; |uart_transmitter|r_Clk_Count[1]~139                                 ; |uart_transmitter|r_Clk_Count[1]~140                                 ; cout             ;
+; |uart_transmitter|r_Clk_Count[2]~141                                 ; |uart_transmitter|r_Clk_Count[2]~141                                 ; combout          ;
+; |uart_transmitter|r_Clk_Count[2]~141                                 ; |uart_transmitter|r_Clk_Count[2]~142                                 ; cout             ;
+; |uart_transmitter|r_Clk_Count[3]~143                                 ; |uart_transmitter|r_Clk_Count[3]~143                                 ; combout          ;
+; |uart_transmitter|r_Clk_Count[3]~143                                 ; |uart_transmitter|r_Clk_Count[3]~144                                 ; cout             ;
+; |uart_transmitter|r_Clk_Count[4]~145                                 ; |uart_transmitter|r_Clk_Count[4]~145                                 ; combout          ;
+; |uart_transmitter|r_Clk_Count[4]~145                                 ; |uart_transmitter|r_Clk_Count[4]~146                                 ; cout             ;
+; |uart_transmitter|r_Clk_Count[5]~147                                 ; |uart_transmitter|r_Clk_Count[5]~147                                 ; combout          ;
+; |uart_transmitter|r_Clk_Count[5]~147                                 ; |uart_transmitter|r_Clk_Count[5]~148                                 ; cout             ;
+; |uart_transmitter|r_Clk_Count[6]~149                                 ; |uart_transmitter|r_Clk_Count[6]~149                                 ; combout          ;
+; |uart_transmitter|o_TX_Active~reg0                                   ; |uart_transmitter|o_TX_Active~reg0                                   ; regout           ;
+; |uart_transmitter|o_TX_Serial~reg0                                   ; |uart_transmitter|o_TX_Serial~reg0                                   ; regout           ;
+; |uart_transmitter|r_TX_Parity                                        ; |uart_transmitter|r_TX_Parity                                        ; regout           ;
+; |uart_transmitter|r_TX_Done                                          ; |uart_transmitter|r_TX_Done                                          ; regout           ;
+; |uart_transmitter|r_SM_Main.s_TX_Start_Bit                           ; |uart_transmitter|r_SM_Main.s_TX_Start_Bit                           ; regout           ;
+; |uart_transmitter|r_SM_Main.s_TX_parity_bit                          ; |uart_transmitter|r_SM_Main.s_TX_parity_bit                          ; regout           ;
+; |uart_transmitter|r_SM_Main.s_TX_Data_Bits                           ; |uart_transmitter|r_SM_Main.s_TX_Data_Bits                           ; regout           ;
+; |uart_transmitter|r_SM_Main.s_TX_Stop_Bit                            ; |uart_transmitter|r_SM_Main.s_TX_Stop_Bit                            ; regout           ;
+; |uart_transmitter|Selector0~41                                       ; |uart_transmitter|Selector0~41                                       ; combout          ;
+; |uart_transmitter|Selector0~42                                       ; |uart_transmitter|Selector0~42                                       ; combout          ;
+; |uart_transmitter|r_Bit_Index[1]                                     ; |uart_transmitter|r_Bit_Index[1]                                     ; regout           ;
+; |uart_transmitter|r_Bit_Index[0]                                     ; |uart_transmitter|r_Bit_Index[0]                                     ; regout           ;
+; |uart_transmitter|Mux0~33                                            ; |uart_transmitter|Mux0~33                                            ; combout          ;
+; |uart_transmitter|Mux0~34                                            ; |uart_transmitter|Mux0~34                                            ; combout          ;
+; |uart_transmitter|Mux0~35                                            ; |uart_transmitter|Mux0~35                                            ; combout          ;
+; |uart_transmitter|Mux0~36                                            ; |uart_transmitter|Mux0~36                                            ; combout          ;
+; |uart_transmitter|r_Bit_Index[2]                                     ; |uart_transmitter|r_Bit_Index[2]                                     ; regout           ;
+; |uart_transmitter|Selector1~66                                       ; |uart_transmitter|Selector1~66                                       ; combout          ;
+; |uart_transmitter|r_SM_Main.s_Cleanup                                ; |uart_transmitter|r_SM_Main.s_Cleanup                                ; regout           ;
+; |uart_transmitter|Selector1~67                                       ; |uart_transmitter|Selector1~67                                       ; combout          ;
+; |uart_transmitter|r_SM_Main.s_Idle                                   ; |uart_transmitter|r_SM_Main.s_Idle                                   ; regout           ;
+; |uart_transmitter|Selector1~68                                       ; |uart_transmitter|Selector1~68                                       ; combout          ;
+; |uart_transmitter|LessThan0~137                                      ; |uart_transmitter|LessThan0~137                                      ; combout          ;
+; |uart_transmitter|r_TX_Parity~177                                    ; |uart_transmitter|r_TX_Parity~177                                    ; combout          ;
+; |uart_transmitter|r_TX_Parity~178                                    ; |uart_transmitter|r_TX_Parity~178                                    ; combout          ;
+; |uart_transmitter|r_TX_Parity~179                                    ; |uart_transmitter|r_TX_Parity~179                                    ; combout          ;
+; |uart_transmitter|r_TX_Parity~180                                    ; |uart_transmitter|r_TX_Parity~180                                    ; combout          ;
+; |uart_transmitter|Selector2~166                                      ; |uart_transmitter|Selector2~166                                      ; combout          ;
+; |uart_transmitter|LessThan0~138                                      ; |uart_transmitter|LessThan0~138                                      ; combout          ;
+; |uart_transmitter|r_SM_Main~69                                       ; |uart_transmitter|r_SM_Main~69                                       ; combout          ;
+; |uart_transmitter|Selector2~167                                      ; |uart_transmitter|Selector2~167                                      ; combout          ;
+; |uart_transmitter|Selector14~76                                      ; |uart_transmitter|Selector14~76                                      ; combout          ;
+; |uart_transmitter|Selector16~39                                      ; |uart_transmitter|Selector16~39                                      ; combout          ;
+; |uart_transmitter|Selector15~207                                     ; |uart_transmitter|Selector15~207                                     ; combout          ;
+; |uart_transmitter|Selector15~208                                     ; |uart_transmitter|Selector15~208                                     ; combout          ;
+; |uart_transmitter|Selector14~77                                      ; |uart_transmitter|Selector14~77                                      ; combout          ;
+; |uart_transmitter|Selector11~201                                     ; |uart_transmitter|Selector11~201                                     ; combout          ;
+; |uart_transmitter|Selector12~222                                     ; |uart_transmitter|Selector12~222                                     ; combout          ;
+; |uart_transmitter|Selector12~223                                     ; |uart_transmitter|Selector12~223                                     ; combout          ;
+; |uart_transmitter|Selector10~263                                     ; |uart_transmitter|Selector10~263                                     ; combout          ;
+; |uart_transmitter|Selector13~31                                      ; |uart_transmitter|Selector13~31                                      ; combout          ;
+; |uart_transmitter|r_Clk_Count[6]~138                                 ; |uart_transmitter|r_Clk_Count[6]~138                                 ; combout          ;
+; |uart_transmitter|Selector11~202                                     ; |uart_transmitter|Selector11~202                                     ; combout          ;
+; |uart_transmitter|Selector10~264                                     ; |uart_transmitter|Selector10~264                                     ; combout          ;
+; |uart_transmitter|Selector10~265                                     ; |uart_transmitter|Selector10~265                                     ; combout          ;
+; |uart_transmitter|o_TX_Active                                        ; |uart_transmitter|o_TX_Active                                        ; padio            ;
+; |uart_transmitter|o_TX_Serial                                        ; |uart_transmitter|o_TX_Serial                                        ; padio            ;
+; |uart_transmitter|o_curr_clock                                       ; |uart_transmitter|o_curr_clock                                       ; padio            ;
+; |uart_transmitter|o_checker_parity                                   ; |uart_transmitter|o_checker_parity                                   ; padio            ;
+; |uart_transmitter|o_TX_Done                                          ; |uart_transmitter|o_TX_Done                                          ; padio            ;
+; |uart_transmitter|clk_i                                              ; |uart_transmitter|clk_i~corein                                       ; combout          ;
+; |uart_transmitter|i_TX_DV                                            ; |uart_transmitter|i_TX_DV~corein                                     ; combout          ;
+; |uart_transmitter|Main_PLL:PLL|altpll:altpll_component|_clk0~clkctrl ; |uart_transmitter|Main_PLL:PLL|altpll:altpll_component|_clk0~clkctrl ; outclk           ;
+; |uart_transmitter|o_curr_clock~clkctrl_e                             ; |uart_transmitter|o_curr_clock~clkctrl_e                             ; outclk           ;
++----------------------------------------------------------------------+----------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                         ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |uart_transmitter|r_TX_Data[7]        ; |uart_transmitter|r_TX_Data[7]        ; regout           ;
+; |uart_transmitter|r_TX_Data[1]        ; |uart_transmitter|r_TX_Data[1]        ; regout           ;
+; |uart_transmitter|r_TX_Data[3]        ; |uart_transmitter|r_TX_Data[3]        ; regout           ;
+; |uart_transmitter|i_TX_Byte[6]        ; |uart_transmitter|i_TX_Byte[6]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[5]        ; |uart_transmitter|i_TX_Byte[5]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[4]        ; |uart_transmitter|i_TX_Byte[4]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[7]        ; |uart_transmitter|i_TX_Byte[7]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[2]        ; |uart_transmitter|i_TX_Byte[2]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[1]        ; |uart_transmitter|i_TX_Byte[1]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[0]        ; |uart_transmitter|i_TX_Byte[0]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[3]        ; |uart_transmitter|i_TX_Byte[3]~corein ; combout          ;
+; |uart_transmitter|r_TX_Data[5]~feeder ; |uart_transmitter|r_TX_Data[5]~feeder ; combout          ;
+; |uart_transmitter|r_TX_Data[7]~feeder ; |uart_transmitter|r_TX_Data[7]~feeder ; combout          ;
+; |uart_transmitter|r_TX_Data[1]~feeder ; |uart_transmitter|r_TX_Data[1]~feeder ; combout          ;
++---------------------------------------+---------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                         ;
++---------------------------------------+---------------------------------------+------------------+
+; Node Name                             ; Output Port Name                      ; Output Port Type ;
++---------------------------------------+---------------------------------------+------------------+
+; |uart_transmitter|r_TX_Data[6]        ; |uart_transmitter|r_TX_Data[6]        ; regout           ;
+; |uart_transmitter|r_TX_Data[5]        ; |uart_transmitter|r_TX_Data[5]        ; regout           ;
+; |uart_transmitter|r_TX_Data[4]        ; |uart_transmitter|r_TX_Data[4]        ; regout           ;
+; |uart_transmitter|r_TX_Data[7]        ; |uart_transmitter|r_TX_Data[7]        ; regout           ;
+; |uart_transmitter|r_TX_Data[2]        ; |uart_transmitter|r_TX_Data[2]        ; regout           ;
+; |uart_transmitter|r_TX_Data[1]        ; |uart_transmitter|r_TX_Data[1]        ; regout           ;
+; |uart_transmitter|r_TX_Data[0]        ; |uart_transmitter|r_TX_Data[0]        ; regout           ;
+; |uart_transmitter|r_TX_Data[3]        ; |uart_transmitter|r_TX_Data[3]        ; regout           ;
+; |uart_transmitter|i_TX_Byte[6]        ; |uart_transmitter|i_TX_Byte[6]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[5]        ; |uart_transmitter|i_TX_Byte[5]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[4]        ; |uart_transmitter|i_TX_Byte[4]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[7]        ; |uart_transmitter|i_TX_Byte[7]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[2]        ; |uart_transmitter|i_TX_Byte[2]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[1]        ; |uart_transmitter|i_TX_Byte[1]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[0]        ; |uart_transmitter|i_TX_Byte[0]~corein ; combout          ;
+; |uart_transmitter|i_TX_Byte[3]        ; |uart_transmitter|i_TX_Byte[3]~corein ; combout          ;
+; |uart_transmitter|r_TX_Data[5]~feeder ; |uart_transmitter|r_TX_Data[5]~feeder ; combout          ;
+; |uart_transmitter|r_TX_Data[7]~feeder ; |uart_transmitter|r_TX_Data[7]~feeder ; combout          ;
+; |uart_transmitter|r_TX_Data[1]~feeder ; |uart_transmitter|r_TX_Data[1]~feeder ; combout          ;
++---------------------------------------+---------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Wed Dec 29 01:03:55 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off uart_transmitter -c uart_transmitter
+Info: Using vector source file "D:/Mosey/Studying/”нивер/ћагистратура/1 семестр/языки описани аппаратуры/uart/uart_transmitter/uart_transmitter.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of uart_transmitter.vwf called uart_transmitter.sim_ori.vwf has been created in the db folder
+Info: System task: Warning : Invalid transition to 'X' detected on CycloneII PLL input clk. This edge will be ignored.
+Info: System task: Time: 0  Instance: PLL|altpll_component|pll
+Info: System task:  Note : CycloneII PLL is enabled
+Info: System task: Time: 0  Instance: PLL|altpll_component|pll
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: System task:  Note : CycloneII PLL locked to incoming clock
+Info: System task: Time: 113518  Instance: PLL|altpll_component|pll
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      79.79 %
+Info: Number of transitions in simulation is 100906
+Info: Vector file uart_transmitter.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Wed Dec 29 01:04:10 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
+
+
