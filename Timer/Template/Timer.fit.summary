@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sun Dec 12 20:52:36 2021
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : Timer
+Top-level Entity Name : Timer
+Family : Cyclone II
+Device : EP2C20F484C7
+Timing Models : Final
+Total logic elements : 78 / 18,752 ( < 1 % )
+    Total combinational functions : 61 / 18,752 ( < 1 % )
+    Dedicated logic registers : 57 / 18,752 ( < 1 % )
+Total registers : 57
+Total pins : 51 / 315 ( 16 % )
+Total virtual pins : 1
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )

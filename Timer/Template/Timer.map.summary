@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Failed - Sun Dec 12 20:52:46 2021
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : Timer
+Top-level Entity Name : Timer
+Family : Cyclone II
+Total logic elements : N/A until Partition Merge
+    Total combinational functions : N/A until Partition Merge
+    Dedicated logic registers : N/A until Partition Merge
+Total registers : N/A until Partition Merge
+Total pins : N/A until Partition Merge
+Total virtual pins : N/A until Partition Merge
+Total memory bits : N/A until Partition Merge
+Embedded Multiplier 9-bit elements : N/A until Partition Merge
+Total PLLs : N/A until Partition Merge

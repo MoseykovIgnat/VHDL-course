@@ -1,0 +1,538 @@
+Simulator report for Timer
+Wed Dec 08 17:06:15 2021
+Quartus II Version 8.1 Build 163 10/28/2008 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2008 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 181 nodes    ;
+; Simulation Coverage         ;       6.32 % ;
+; Total Number of Transitions ; 735          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C20F484C7 ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                              ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Option                                                                                     ; Setting            ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Simulation mode                                                                            ; Timing             ; Timing        ;
+; Start time                                                                                 ; 0 ns               ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF               ;               ;
+; Vector input source                                                                        ; Timer_waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                 ; On            ;
+; Check outputs                                                                              ; Off                ; Off           ;
+; Report simulation coverage                                                                 ; On                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                ; Off           ;
+; Detect glitches                                                                            ; Off                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto               ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       6.32 % ;
+; Total nodes checked                                 ; 181          ;
+; Total output ports checked                          ; 190          ;
+; Total output ports with complete 1/0-value coverage ; 12           ;
+; Total output ports with no 1/0-value coverage       ; 177          ;
+; Total output ports with no 1-value coverage         ; 178          ;
+; Total output ports with no 0-value coverage         ; 177          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                        ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |Timer|btn_s                   ; |Timer|btn_s                   ; regout           ;
+; |Timer|prescaler_increment_s   ; |Timer|prescaler_increment_s   ; regout           ;
+; |Timer|switch_s                ; |Timer|switch_s                ; regout           ;
+; |Timer|Ref_Freq_s~7            ; |Timer|Ref_Freq_s~7            ; combout          ;
+; |Timer|btn_0_s                 ; |Timer|btn_0_s                 ; regout           ;
+; |Timer|btn_1_s                 ; |Timer|btn_1_s                 ; regout           ;
+; |Timer|btn_s~0                 ; |Timer|btn_s~0                 ; combout          ;
+; |Timer|prescaler_increment_s~2 ; |Timer|prescaler_increment_s~2 ; combout          ;
+; |Timer|btn_0_s~2               ; |Timer|btn_0_s~2               ; combout          ;
+; |Timer|clk_i                   ; |Timer|clk_i~corein            ; combout          ;
+; |Timer|button_1_1              ; |Timer|button_1_1~corein       ; combout          ;
+; |Timer|clk_i~clkctrl           ; |Timer|clk_i~clkctrl           ; outclk           ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                   ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; Node Name                                                                  ; Output Port Name                                                           ; Output Port Type ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; |Timer|cnt_min_0x_s[0]                                                     ; |Timer|cnt_min_0x_s[0]                                                     ; regout           ;
+; |Timer|cnt_min_0x_s[1]                                                     ; |Timer|cnt_min_0x_s[1]                                                     ; regout           ;
+; |Timer|cnt_min_0x_s[2]                                                     ; |Timer|cnt_min_0x_s[2]                                                     ; regout           ;
+; |Timer|cnt_min_0x_s[3]                                                     ; |Timer|cnt_min_0x_s[3]                                                     ; regout           ;
+; |Timer|Main_PLL:PLL|altpll:altpll_component|pll                            ; |Timer|Main_PLL:PLL|altpll:altpll_component|_clk0                          ; clk0             ;
+; |Timer|Add2~48                                                             ; |Timer|Add2~48                                                             ; combout          ;
+; |Timer|Add2~48                                                             ; |Timer|Add2~49                                                             ; cout             ;
+; |Timer|Add2~50                                                             ; |Timer|Add2~50                                                             ; combout          ;
+; |Timer|Add2~50                                                             ; |Timer|Add2~51                                                             ; cout             ;
+; |Timer|Add2~52                                                             ; |Timer|Add2~52                                                             ; combout          ;
+; |Timer|Add2~52                                                             ; |Timer|Add2~53                                                             ; cout             ;
+; |Timer|Add2~54                                                             ; |Timer|Add2~54                                                             ; combout          ;
+; |Timer|cnt_min_0x_s[0]~102                                                 ; |Timer|cnt_min_0x_s[0]~102                                                 ; combout          ;
+; |Timer|cnt_min_0x_s[0]~102                                                 ; |Timer|cnt_min_0x_s[0]~103                                                 ; cout             ;
+; |Timer|cnt_min_0x_s[1]~105                                                 ; |Timer|cnt_min_0x_s[1]~105                                                 ; combout          ;
+; |Timer|cnt_min_0x_s[1]~105                                                 ; |Timer|cnt_min_0x_s[1]~106                                                 ; cout             ;
+; |Timer|cnt_min_0x_s[2]~107                                                 ; |Timer|cnt_min_0x_s[2]~107                                                 ; combout          ;
+; |Timer|cnt_min_0x_s[2]~107                                                 ; |Timer|cnt_min_0x_s[2]~108                                                 ; cout             ;
+; |Timer|cnt_min_0x_s[3]~109                                                 ; |Timer|cnt_min_0x_s[3]~109                                                 ; combout          ;
+; |Timer|Add4~48                                                             ; |Timer|Add4~48                                                             ; combout          ;
+; |Timer|Add4~48                                                             ; |Timer|Add4~49                                                             ; cout             ;
+; |Timer|Add4~50                                                             ; |Timer|Add4~50                                                             ; combout          ;
+; |Timer|Add4~50                                                             ; |Timer|Add4~51                                                             ; cout             ;
+; |Timer|Add4~52                                                             ; |Timer|Add4~52                                                             ; combout          ;
+; |Timer|Add4~52                                                             ; |Timer|Add4~53                                                             ; cout             ;
+; |Timer|Add4~54                                                             ; |Timer|Add4~54                                                             ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[1]~499                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[1]~499                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[3]~500                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[3]~500                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[4]~501                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[4]~501                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[5]~502                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[5]~502                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[6]~503                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[6]~503                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[1]~495                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[1]~495                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[3]~496                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[3]~496                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[4]~497                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[4]~497                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[5]~498                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[5]~498                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[6]~499                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[6]~499                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[1]~495                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[1]~495                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[3]~496                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[3]~496                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[4]~497                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[4]~497                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[5]~498                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[5]~498                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[6]~499                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[6]~499                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[1]~495                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[1]~495                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[3]~496                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[3]~496                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[4]~497                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[4]~497                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[5]~498                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[5]~498                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[6]~499                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[6]~499                ; combout          ;
+; |Timer|cnt_sec_0x_carry_s                                                  ; |Timer|cnt_sec_0x_carry_s                                                  ; regout           ;
+; |Timer|cnt_sec_0x_s[0]                                                     ; |Timer|cnt_sec_0x_s[0]                                                     ; regout           ;
+; |Timer|cnt_sec_0x_s[1]                                                     ; |Timer|cnt_sec_0x_s[1]                                                     ; regout           ;
+; |Timer|cnt_sec_0x_s[2]                                                     ; |Timer|cnt_sec_0x_s[2]                                                     ; regout           ;
+; |Timer|cnt_sec_0x_s[3]                                                     ; |Timer|cnt_sec_0x_s[3]                                                     ; regout           ;
+; |Timer|cnt_sec_xx_carry_s                                                  ; |Timer|cnt_sec_xx_carry_s                                                  ; regout           ;
+; |Timer|cnt_sec_x0_s[0]                                                     ; |Timer|cnt_sec_x0_s[0]                                                     ; regout           ;
+; |Timer|cnt_sec_x0_s[1]                                                     ; |Timer|cnt_sec_x0_s[1]                                                     ; regout           ;
+; |Timer|cnt_sec_x0_s[2]                                                     ; |Timer|cnt_sec_x0_s[2]                                                     ; regout           ;
+; |Timer|cnt_sec_x0_s[3]                                                     ; |Timer|cnt_sec_x0_s[3]                                                     ; regout           ;
+; |Timer|cnt_min_0x_carry_s                                                  ; |Timer|cnt_min_0x_carry_s                                                  ; regout           ;
+; |Timer|cnt_min_xx_carry_s                                                  ; |Timer|cnt_min_xx_carry_s                                                  ; regout           ;
+; |Timer|cnt_min_x0_s[0]                                                     ; |Timer|cnt_min_x0_s[0]                                                     ; regout           ;
+; |Timer|cnt_min_x0_s[1]                                                     ; |Timer|cnt_min_x0_s[1]                                                     ; regout           ;
+; |Timer|cnt_min_x0_s[2]                                                     ; |Timer|cnt_min_x0_s[2]                                                     ; regout           ;
+; |Timer|cnt_min_x0_s[3]                                                     ; |Timer|cnt_min_x0_s[3]                                                     ; regout           ;
+; |Timer|Number_s[0][3]                                                      ; |Timer|Number_s[0][3]                                                      ; regout           ;
+; |Timer|Number_s[0][2]                                                      ; |Timer|Number_s[0][2]                                                      ; regout           ;
+; |Timer|Number_s[0][1]                                                      ; |Timer|Number_s[0][1]                                                      ; regout           ;
+; |Timer|Number_s[0][0]                                                      ; |Timer|Number_s[0][0]                                                      ; regout           ;
+; |Timer|Number_s[1][3]                                                      ; |Timer|Number_s[1][3]                                                      ; regout           ;
+; |Timer|Number_s[1][2]                                                      ; |Timer|Number_s[1][2]                                                      ; regout           ;
+; |Timer|Number_s[1][1]                                                      ; |Timer|Number_s[1][1]                                                      ; regout           ;
+; |Timer|Number_s[1][0]                                                      ; |Timer|Number_s[1][0]                                                      ; regout           ;
+; |Timer|Number_s[2][3]                                                      ; |Timer|Number_s[2][3]                                                      ; regout           ;
+; |Timer|Number_s[2][2]                                                      ; |Timer|Number_s[2][2]                                                      ; regout           ;
+; |Timer|Number_s[2][1]                                                      ; |Timer|Number_s[2][1]                                                      ; regout           ;
+; |Timer|Number_s[2][0]                                                      ; |Timer|Number_s[2][0]                                                      ; regout           ;
+; |Timer|Number_s[3][3]                                                      ; |Timer|Number_s[3][3]                                                      ; regout           ;
+; |Timer|Number_s[3][2]                                                      ; |Timer|Number_s[3][2]                                                      ; regout           ;
+; |Timer|Number_s[3][1]                                                      ; |Timer|Number_s[3][1]                                                      ; regout           ;
+; |Timer|Number_s[3][0]                                                      ; |Timer|Number_s[3][0]                                                      ; regout           ;
+; |Timer|Equal0~37                                                           ; |Timer|Equal0~37                                                           ; combout          ;
+; |Timer|cnt_sec_0x_s~146                                                    ; |Timer|cnt_sec_0x_s~146                                                    ; combout          ;
+; |Timer|cnt_sec_0x_s[2]~147                                                 ; |Timer|cnt_sec_0x_s[2]~147                                                 ; combout          ;
+; |Timer|cnt_sec_0x_s~148                                                    ; |Timer|cnt_sec_0x_s~148                                                    ; combout          ;
+; |Timer|sec_xx~66                                                           ; |Timer|sec_xx~66                                                           ; combout          ;
+; |Timer|sec_xx~0                                                            ; |Timer|sec_xx~0                                                            ; combout          ;
+; |Timer|cnt_sec_x0_s~118                                                    ; |Timer|cnt_sec_x0_s~118                                                    ; combout          ;
+; |Timer|cnt_sec_x0_s~119                                                    ; |Timer|cnt_sec_x0_s~119                                                    ; combout          ;
+; |Timer|Equal2~58                                                           ; |Timer|Equal2~58                                                           ; combout          ;
+; |Timer|cnt_min_0x_carry_s~31                                               ; |Timer|cnt_min_0x_carry_s~31                                               ; combout          ;
+; |Timer|cnt_min_0x_s[0]~104                                                 ; |Timer|cnt_min_0x_s[0]~104                                                 ; combout          ;
+; |Timer|sec_xx~67                                                           ; |Timer|sec_xx~67                                                           ; combout          ;
+; |Timer|sec_xx~1                                                            ; |Timer|sec_xx~1                                                            ; combout          ;
+; |Timer|cnt_min_x0_s~129                                                    ; |Timer|cnt_min_x0_s~129                                                    ; combout          ;
+; |Timer|cnt_min_x0_s~130                                                    ; |Timer|cnt_min_x0_s~130                                                    ; combout          ;
+; |Timer|cnt_sec_0x_s[0]~149                                                 ; |Timer|cnt_sec_0x_s[0]~149                                                 ; combout          ;
+; |Timer|cnt_min_0x_carry_s~32                                               ; |Timer|cnt_min_0x_carry_s~32                                               ; combout          ;
+; |Timer|SS_Pin[0][0]                                                        ; |Timer|SS_Pin[0][0]                                                        ; padio            ;
+; |Timer|SS_Pin[0][1]                                                        ; |Timer|SS_Pin[0][1]                                                        ; padio            ;
+; |Timer|SS_Pin[0][2]                                                        ; |Timer|SS_Pin[0][2]                                                        ; padio            ;
+; |Timer|SS_Pin[0][3]                                                        ; |Timer|SS_Pin[0][3]                                                        ; padio            ;
+; |Timer|SS_Pin[0][4]                                                        ; |Timer|SS_Pin[0][4]                                                        ; padio            ;
+; |Timer|SS_Pin[0][5]                                                        ; |Timer|SS_Pin[0][5]                                                        ; padio            ;
+; |Timer|SS_Pin[0][6]                                                        ; |Timer|SS_Pin[0][6]                                                        ; padio            ;
+; |Timer|SS_Pin[1][0]                                                        ; |Timer|SS_Pin[1][0]                                                        ; padio            ;
+; |Timer|SS_Pin[1][1]                                                        ; |Timer|SS_Pin[1][1]                                                        ; padio            ;
+; |Timer|SS_Pin[1][2]                                                        ; |Timer|SS_Pin[1][2]                                                        ; padio            ;
+; |Timer|SS_Pin[1][3]                                                        ; |Timer|SS_Pin[1][3]                                                        ; padio            ;
+; |Timer|SS_Pin[1][4]                                                        ; |Timer|SS_Pin[1][4]                                                        ; padio            ;
+; |Timer|SS_Pin[1][5]                                                        ; |Timer|SS_Pin[1][5]                                                        ; padio            ;
+; |Timer|SS_Pin[1][6]                                                        ; |Timer|SS_Pin[1][6]                                                        ; padio            ;
+; |Timer|SS_Pin[2][0]                                                        ; |Timer|SS_Pin[2][0]                                                        ; padio            ;
+; |Timer|SS_Pin[2][1]                                                        ; |Timer|SS_Pin[2][1]                                                        ; padio            ;
+; |Timer|SS_Pin[2][2]                                                        ; |Timer|SS_Pin[2][2]                                                        ; padio            ;
+; |Timer|SS_Pin[2][3]                                                        ; |Timer|SS_Pin[2][3]                                                        ; padio            ;
+; |Timer|SS_Pin[2][4]                                                        ; |Timer|SS_Pin[2][4]                                                        ; padio            ;
+; |Timer|SS_Pin[2][5]                                                        ; |Timer|SS_Pin[2][5]                                                        ; padio            ;
+; |Timer|SS_Pin[2][6]                                                        ; |Timer|SS_Pin[2][6]                                                        ; padio            ;
+; |Timer|SS_Pin[3][0]                                                        ; |Timer|SS_Pin[3][0]                                                        ; padio            ;
+; |Timer|SS_Pin[3][1]                                                        ; |Timer|SS_Pin[3][1]                                                        ; padio            ;
+; |Timer|SS_Pin[3][2]                                                        ; |Timer|SS_Pin[3][2]                                                        ; padio            ;
+; |Timer|SS_Pin[3][3]                                                        ; |Timer|SS_Pin[3][3]                                                        ; padio            ;
+; |Timer|SS_Pin[3][4]                                                        ; |Timer|SS_Pin[3][4]                                                        ; padio            ;
+; |Timer|SS_Pin[3][5]                                                        ; |Timer|SS_Pin[3][5]                                                        ; padio            ;
+; |Timer|SS_Pin[3][6]                                                        ; |Timer|SS_Pin[3][6]                                                        ; padio            ;
+; |Timer|cnt_sec_0x_o                                                        ; |Timer|cnt_sec_0x_o                                                        ; padio            ;
+; |Timer|cur_sec_0x_o_val[0]                                                 ; |Timer|cur_sec_0x_o_val[0]                                                 ; padio            ;
+; |Timer|cur_sec_0x_o_val[1]                                                 ; |Timer|cur_sec_0x_o_val[1]                                                 ; padio            ;
+; |Timer|cur_sec_0x_o_val[2]                                                 ; |Timer|cur_sec_0x_o_val[2]                                                 ; padio            ;
+; |Timer|cur_sec_0x_o_val[3]                                                 ; |Timer|cur_sec_0x_o_val[3]                                                 ; padio            ;
+; |Timer|cnt_sec_x0_o                                                        ; |Timer|cnt_sec_x0_o                                                        ; padio            ;
+; |Timer|cur_sec_x0_o_val[0]                                                 ; |Timer|cur_sec_x0_o_val[0]                                                 ; padio            ;
+; |Timer|cur_sec_x0_o_val[1]                                                 ; |Timer|cur_sec_x0_o_val[1]                                                 ; padio            ;
+; |Timer|cur_sec_x0_o_val[2]                                                 ; |Timer|cur_sec_x0_o_val[2]                                                 ; padio            ;
+; |Timer|cur_sec_x0_o_val[3]                                                 ; |Timer|cur_sec_x0_o_val[3]                                                 ; padio            ;
+; |Timer|cnt_min_0x_o                                                        ; |Timer|cnt_min_0x_o                                                        ; padio            ;
+; |Timer|cur_min_0x_o_val[0]                                                 ; |Timer|cur_min_0x_o_val[0]                                                 ; padio            ;
+; |Timer|cur_min_0x_o_val[1]                                                 ; |Timer|cur_min_0x_o_val[1]                                                 ; padio            ;
+; |Timer|cur_min_0x_o_val[2]                                                 ; |Timer|cur_min_0x_o_val[2]                                                 ; padio            ;
+; |Timer|cur_min_0x_o_val[3]                                                 ; |Timer|cur_min_0x_o_val[3]                                                 ; padio            ;
+; |Timer|cnt_min_x0_o                                                        ; |Timer|cnt_min_x0_o                                                        ; padio            ;
+; |Timer|cur_min_x0_o_val[0]                                                 ; |Timer|cur_min_x0_o_val[0]                                                 ; padio            ;
+; |Timer|cur_min_x0_o_val[1]                                                 ; |Timer|cur_min_x0_o_val[1]                                                 ; padio            ;
+; |Timer|cur_min_x0_o_val[2]                                                 ; |Timer|cur_min_x0_o_val[2]                                                 ; padio            ;
+; |Timer|cur_min_x0_o_val[3]                                                 ; |Timer|cur_min_x0_o_val[3]                                                 ; padio            ;
+; |Timer|switch_1_1                                                          ; |Timer|switch_1_1~corein                                                   ; combout          ;
+; |Timer|ref_freq_vp                                                         ; |Timer|ref_freq_vp                                                         ; pin_out          ;
+; |Timer|Main_PLL:PLL|altpll:altpll_component|_clk0~clkctrl                  ; |Timer|Main_PLL:PLL|altpll:altpll_component|_clk0~clkctrl                  ; outclk           ;
+; |Timer|Number_s[2][0]~feeder                                               ; |Timer|Number_s[2][0]~feeder                                               ; combout          ;
+; |Timer|Number_s[2][3]~feeder                                               ; |Timer|Number_s[2][3]~feeder                                               ; combout          ;
+; |Timer|Number_s[0][0]~feeder                                               ; |Timer|Number_s[0][0]~feeder                                               ; combout          ;
+; |Timer|Number_s[0][3]~feeder                                               ; |Timer|Number_s[0][3]~feeder                                               ; combout          ;
+; |Timer|Number_s[1][0]~feeder                                               ; |Timer|Number_s[1][0]~feeder                                               ; combout          ;
+; |Timer|Number_s[1][2]~feeder                                               ; |Timer|Number_s[1][2]~feeder                                               ; combout          ;
+; |Timer|Number_s[1][3]~feeder                                               ; |Timer|Number_s[1][3]~feeder                                               ; combout          ;
+; |Timer|Number_s[3][3]~feeder                                               ; |Timer|Number_s[3][3]~feeder                                               ; combout          ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                   ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; Node Name                                                                  ; Output Port Name                                                           ; Output Port Type ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; |Timer|cnt_min_0x_s[0]                                                     ; |Timer|cnt_min_0x_s[0]                                                     ; regout           ;
+; |Timer|cnt_min_0x_s[1]                                                     ; |Timer|cnt_min_0x_s[1]                                                     ; regout           ;
+; |Timer|cnt_min_0x_s[2]                                                     ; |Timer|cnt_min_0x_s[2]                                                     ; regout           ;
+; |Timer|cnt_min_0x_s[3]                                                     ; |Timer|cnt_min_0x_s[3]                                                     ; regout           ;
+; |Timer|Main_PLL:PLL|altpll:altpll_component|pll                            ; |Timer|Main_PLL:PLL|altpll:altpll_component|_clk0                          ; clk0             ;
+; |Timer|Add2~48                                                             ; |Timer|Add2~48                                                             ; combout          ;
+; |Timer|Add2~48                                                             ; |Timer|Add2~49                                                             ; cout             ;
+; |Timer|Add2~50                                                             ; |Timer|Add2~50                                                             ; combout          ;
+; |Timer|Add2~50                                                             ; |Timer|Add2~51                                                             ; cout             ;
+; |Timer|Add2~52                                                             ; |Timer|Add2~52                                                             ; combout          ;
+; |Timer|Add2~52                                                             ; |Timer|Add2~53                                                             ; cout             ;
+; |Timer|Add2~54                                                             ; |Timer|Add2~54                                                             ; combout          ;
+; |Timer|cnt_min_0x_s[0]~102                                                 ; |Timer|cnt_min_0x_s[0]~102                                                 ; combout          ;
+; |Timer|cnt_min_0x_s[0]~102                                                 ; |Timer|cnt_min_0x_s[0]~103                                                 ; cout             ;
+; |Timer|cnt_min_0x_s[1]~105                                                 ; |Timer|cnt_min_0x_s[1]~105                                                 ; combout          ;
+; |Timer|cnt_min_0x_s[1]~105                                                 ; |Timer|cnt_min_0x_s[1]~106                                                 ; cout             ;
+; |Timer|cnt_min_0x_s[2]~107                                                 ; |Timer|cnt_min_0x_s[2]~107                                                 ; combout          ;
+; |Timer|cnt_min_0x_s[2]~107                                                 ; |Timer|cnt_min_0x_s[2]~108                                                 ; cout             ;
+; |Timer|cnt_min_0x_s[3]~109                                                 ; |Timer|cnt_min_0x_s[3]~109                                                 ; combout          ;
+; |Timer|Add4~48                                                             ; |Timer|Add4~48                                                             ; combout          ;
+; |Timer|Add4~48                                                             ; |Timer|Add4~49                                                             ; cout             ;
+; |Timer|Add4~50                                                             ; |Timer|Add4~50                                                             ; combout          ;
+; |Timer|Add4~50                                                             ; |Timer|Add4~51                                                             ; cout             ;
+; |Timer|Add4~52                                                             ; |Timer|Add4~52                                                             ; combout          ;
+; |Timer|Add4~52                                                             ; |Timer|Add4~53                                                             ; cout             ;
+; |Timer|Add4~54                                                             ; |Timer|Add4~54                                                             ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[1]~499                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[1]~499                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[3]~500                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[3]~500                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[4]~501                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[4]~501                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[5]~502                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[5]~502                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[6]~503                ; |Timer|Seven_Segment:\Indicator:0:SS_Display|Segment[6]~503                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[1]~495                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[1]~495                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[3]~496                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[3]~496                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[4]~497                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[4]~497                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[5]~498                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[5]~498                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[6]~499                ; |Timer|Seven_Segment:\Indicator:1:SS_Display|Segment[6]~499                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[1]~495                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[1]~495                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[3]~496                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[3]~496                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[4]~497                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[4]~497                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[5]~498                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[5]~498                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[6]~499                ; |Timer|Seven_Segment:\Indicator:2:SS_Display|Segment[6]~499                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[3] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[2] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[1] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; |Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg|dffs[0] ; regout           ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[0]                    ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[0]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[1]~495                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[1]~495                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[2]                    ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[2]                    ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[3]~496                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[3]~496                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[4]~497                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[4]~497                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[5]~498                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[5]~498                ; combout          ;
+; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[6]~499                ; |Timer|Seven_Segment:\Indicator:3:SS_Display|Segment[6]~499                ; combout          ;
+; |Timer|cnt_sec_0x_carry_s                                                  ; |Timer|cnt_sec_0x_carry_s                                                  ; regout           ;
+; |Timer|cnt_sec_0x_s[0]                                                     ; |Timer|cnt_sec_0x_s[0]                                                     ; regout           ;
+; |Timer|cnt_sec_0x_s[1]                                                     ; |Timer|cnt_sec_0x_s[1]                                                     ; regout           ;
+; |Timer|cnt_sec_0x_s[2]                                                     ; |Timer|cnt_sec_0x_s[2]                                                     ; regout           ;
+; |Timer|cnt_sec_0x_s[3]                                                     ; |Timer|cnt_sec_0x_s[3]                                                     ; regout           ;
+; |Timer|cnt_sec_xx_carry_s                                                  ; |Timer|cnt_sec_xx_carry_s                                                  ; regout           ;
+; |Timer|cnt_sec_x0_s[0]                                                     ; |Timer|cnt_sec_x0_s[0]                                                     ; regout           ;
+; |Timer|cnt_sec_x0_s[1]                                                     ; |Timer|cnt_sec_x0_s[1]                                                     ; regout           ;
+; |Timer|cnt_sec_x0_s[2]                                                     ; |Timer|cnt_sec_x0_s[2]                                                     ; regout           ;
+; |Timer|cnt_sec_x0_s[3]                                                     ; |Timer|cnt_sec_x0_s[3]                                                     ; regout           ;
+; |Timer|cnt_min_0x_carry_s                                                  ; |Timer|cnt_min_0x_carry_s                                                  ; regout           ;
+; |Timer|cnt_min_xx_carry_s                                                  ; |Timer|cnt_min_xx_carry_s                                                  ; regout           ;
+; |Timer|cnt_min_x0_s[0]                                                     ; |Timer|cnt_min_x0_s[0]                                                     ; regout           ;
+; |Timer|cnt_min_x0_s[1]                                                     ; |Timer|cnt_min_x0_s[1]                                                     ; regout           ;
+; |Timer|cnt_min_x0_s[2]                                                     ; |Timer|cnt_min_x0_s[2]                                                     ; regout           ;
+; |Timer|cnt_min_x0_s[3]                                                     ; |Timer|cnt_min_x0_s[3]                                                     ; regout           ;
+; |Timer|Number_s[0][3]                                                      ; |Timer|Number_s[0][3]                                                      ; regout           ;
+; |Timer|Number_s[0][2]                                                      ; |Timer|Number_s[0][2]                                                      ; regout           ;
+; |Timer|Number_s[0][1]                                                      ; |Timer|Number_s[0][1]                                                      ; regout           ;
+; |Timer|Number_s[0][0]                                                      ; |Timer|Number_s[0][0]                                                      ; regout           ;
+; |Timer|Number_s[1][3]                                                      ; |Timer|Number_s[1][3]                                                      ; regout           ;
+; |Timer|Number_s[1][2]                                                      ; |Timer|Number_s[1][2]                                                      ; regout           ;
+; |Timer|Number_s[1][1]                                                      ; |Timer|Number_s[1][1]                                                      ; regout           ;
+; |Timer|Number_s[1][0]                                                      ; |Timer|Number_s[1][0]                                                      ; regout           ;
+; |Timer|Number_s[2][3]                                                      ; |Timer|Number_s[2][3]                                                      ; regout           ;
+; |Timer|Number_s[2][2]                                                      ; |Timer|Number_s[2][2]                                                      ; regout           ;
+; |Timer|Number_s[2][1]                                                      ; |Timer|Number_s[2][1]                                                      ; regout           ;
+; |Timer|Number_s[2][0]                                                      ; |Timer|Number_s[2][0]                                                      ; regout           ;
+; |Timer|Number_s[3][3]                                                      ; |Timer|Number_s[3][3]                                                      ; regout           ;
+; |Timer|Number_s[3][2]                                                      ; |Timer|Number_s[3][2]                                                      ; regout           ;
+; |Timer|Number_s[3][1]                                                      ; |Timer|Number_s[3][1]                                                      ; regout           ;
+; |Timer|Number_s[3][0]                                                      ; |Timer|Number_s[3][0]                                                      ; regout           ;
+; |Timer|Equal0~37                                                           ; |Timer|Equal0~37                                                           ; combout          ;
+; |Timer|cnt_sec_0x_s~146                                                    ; |Timer|cnt_sec_0x_s~146                                                    ; combout          ;
+; |Timer|cnt_sec_0x_s[2]~147                                                 ; |Timer|cnt_sec_0x_s[2]~147                                                 ; combout          ;
+; |Timer|cnt_sec_0x_s~148                                                    ; |Timer|cnt_sec_0x_s~148                                                    ; combout          ;
+; |Timer|sec_xx~66                                                           ; |Timer|sec_xx~66                                                           ; combout          ;
+; |Timer|sec_xx~0                                                            ; |Timer|sec_xx~0                                                            ; combout          ;
+; |Timer|cnt_sec_x0_s~118                                                    ; |Timer|cnt_sec_x0_s~118                                                    ; combout          ;
+; |Timer|cnt_sec_x0_s~119                                                    ; |Timer|cnt_sec_x0_s~119                                                    ; combout          ;
+; |Timer|Equal2~58                                                           ; |Timer|Equal2~58                                                           ; combout          ;
+; |Timer|cnt_min_0x_carry_s~31                                               ; |Timer|cnt_min_0x_carry_s~31                                               ; combout          ;
+; |Timer|cnt_min_0x_s[0]~104                                                 ; |Timer|cnt_min_0x_s[0]~104                                                 ; combout          ;
+; |Timer|sec_xx~67                                                           ; |Timer|sec_xx~67                                                           ; combout          ;
+; |Timer|sec_xx~1                                                            ; |Timer|sec_xx~1                                                            ; combout          ;
+; |Timer|cnt_min_x0_s~129                                                    ; |Timer|cnt_min_x0_s~129                                                    ; combout          ;
+; |Timer|cnt_min_x0_s~130                                                    ; |Timer|cnt_min_x0_s~130                                                    ; combout          ;
+; |Timer|cnt_sec_0x_s[0]~149                                                 ; |Timer|cnt_sec_0x_s[0]~149                                                 ; combout          ;
+; |Timer|cnt_min_0x_carry_s~32                                               ; |Timer|cnt_min_0x_carry_s~32                                               ; combout          ;
+; |Timer|SS_Pin[0][0]                                                        ; |Timer|SS_Pin[0][0]                                                        ; padio            ;
+; |Timer|SS_Pin[0][1]                                                        ; |Timer|SS_Pin[0][1]                                                        ; padio            ;
+; |Timer|SS_Pin[0][2]                                                        ; |Timer|SS_Pin[0][2]                                                        ; padio            ;
+; |Timer|SS_Pin[0][3]                                                        ; |Timer|SS_Pin[0][3]                                                        ; padio            ;
+; |Timer|SS_Pin[0][4]                                                        ; |Timer|SS_Pin[0][4]                                                        ; padio            ;
+; |Timer|SS_Pin[0][5]                                                        ; |Timer|SS_Pin[0][5]                                                        ; padio            ;
+; |Timer|SS_Pin[0][6]                                                        ; |Timer|SS_Pin[0][6]                                                        ; padio            ;
+; |Timer|SS_Pin[1][0]                                                        ; |Timer|SS_Pin[1][0]                                                        ; padio            ;
+; |Timer|SS_Pin[1][1]                                                        ; |Timer|SS_Pin[1][1]                                                        ; padio            ;
+; |Timer|SS_Pin[1][2]                                                        ; |Timer|SS_Pin[1][2]                                                        ; padio            ;
+; |Timer|SS_Pin[1][3]                                                        ; |Timer|SS_Pin[1][3]                                                        ; padio            ;
+; |Timer|SS_Pin[1][4]                                                        ; |Timer|SS_Pin[1][4]                                                        ; padio            ;
+; |Timer|SS_Pin[1][5]                                                        ; |Timer|SS_Pin[1][5]                                                        ; padio            ;
+; |Timer|SS_Pin[1][6]                                                        ; |Timer|SS_Pin[1][6]                                                        ; padio            ;
+; |Timer|SS_Pin[2][0]                                                        ; |Timer|SS_Pin[2][0]                                                        ; padio            ;
+; |Timer|SS_Pin[2][1]                                                        ; |Timer|SS_Pin[2][1]                                                        ; padio            ;
+; |Timer|SS_Pin[2][2]                                                        ; |Timer|SS_Pin[2][2]                                                        ; padio            ;
+; |Timer|SS_Pin[2][3]                                                        ; |Timer|SS_Pin[2][3]                                                        ; padio            ;
+; |Timer|SS_Pin[2][4]                                                        ; |Timer|SS_Pin[2][4]                                                        ; padio            ;
+; |Timer|SS_Pin[2][5]                                                        ; |Timer|SS_Pin[2][5]                                                        ; padio            ;
+; |Timer|SS_Pin[2][6]                                                        ; |Timer|SS_Pin[2][6]                                                        ; padio            ;
+; |Timer|SS_Pin[3][0]                                                        ; |Timer|SS_Pin[3][0]                                                        ; padio            ;
+; |Timer|SS_Pin[3][1]                                                        ; |Timer|SS_Pin[3][1]                                                        ; padio            ;
+; |Timer|SS_Pin[3][2]                                                        ; |Timer|SS_Pin[3][2]                                                        ; padio            ;
+; |Timer|SS_Pin[3][3]                                                        ; |Timer|SS_Pin[3][3]                                                        ; padio            ;
+; |Timer|SS_Pin[3][4]                                                        ; |Timer|SS_Pin[3][4]                                                        ; padio            ;
+; |Timer|SS_Pin[3][5]                                                        ; |Timer|SS_Pin[3][5]                                                        ; padio            ;
+; |Timer|SS_Pin[3][6]                                                        ; |Timer|SS_Pin[3][6]                                                        ; padio            ;
+; |Timer|cnt_sec_0x_o                                                        ; |Timer|cnt_sec_0x_o                                                        ; padio            ;
+; |Timer|cur_sec_0x_o_val[0]                                                 ; |Timer|cur_sec_0x_o_val[0]                                                 ; padio            ;
+; |Timer|cur_sec_0x_o_val[1]                                                 ; |Timer|cur_sec_0x_o_val[1]                                                 ; padio            ;
+; |Timer|cur_sec_0x_o_val[2]                                                 ; |Timer|cur_sec_0x_o_val[2]                                                 ; padio            ;
+; |Timer|cur_sec_0x_o_val[3]                                                 ; |Timer|cur_sec_0x_o_val[3]                                                 ; padio            ;
+; |Timer|cnt_sec_x0_o                                                        ; |Timer|cnt_sec_x0_o                                                        ; padio            ;
+; |Timer|cur_sec_x0_o_val[0]                                                 ; |Timer|cur_sec_x0_o_val[0]                                                 ; padio            ;
+; |Timer|cur_sec_x0_o_val[1]                                                 ; |Timer|cur_sec_x0_o_val[1]                                                 ; padio            ;
+; |Timer|cur_sec_x0_o_val[2]                                                 ; |Timer|cur_sec_x0_o_val[2]                                                 ; padio            ;
+; |Timer|cur_sec_x0_o_val[3]                                                 ; |Timer|cur_sec_x0_o_val[3]                                                 ; padio            ;
+; |Timer|cnt_min_0x_o                                                        ; |Timer|cnt_min_0x_o                                                        ; padio            ;
+; |Timer|cur_min_0x_o_val[0]                                                 ; |Timer|cur_min_0x_o_val[0]                                                 ; padio            ;
+; |Timer|cur_min_0x_o_val[1]                                                 ; |Timer|cur_min_0x_o_val[1]                                                 ; padio            ;
+; |Timer|cur_min_0x_o_val[2]                                                 ; |Timer|cur_min_0x_o_val[2]                                                 ; padio            ;
+; |Timer|cur_min_0x_o_val[3]                                                 ; |Timer|cur_min_0x_o_val[3]                                                 ; padio            ;
+; |Timer|cnt_min_x0_o                                                        ; |Timer|cnt_min_x0_o                                                        ; padio            ;
+; |Timer|cur_min_x0_o_val[0]                                                 ; |Timer|cur_min_x0_o_val[0]                                                 ; padio            ;
+; |Timer|cur_min_x0_o_val[1]                                                 ; |Timer|cur_min_x0_o_val[1]                                                 ; padio            ;
+; |Timer|cur_min_x0_o_val[2]                                                 ; |Timer|cur_min_x0_o_val[2]                                                 ; padio            ;
+; |Timer|cur_min_x0_o_val[3]                                                 ; |Timer|cur_min_x0_o_val[3]                                                 ; padio            ;
+; |Timer|ref_freq_vp                                                         ; |Timer|ref_freq_vp                                                         ; pin_out          ;
+; |Timer|Main_PLL:PLL|altpll:altpll_component|_clk0~clkctrl                  ; |Timer|Main_PLL:PLL|altpll:altpll_component|_clk0~clkctrl                  ; outclk           ;
+; |Timer|Number_s[2][0]~feeder                                               ; |Timer|Number_s[2][0]~feeder                                               ; combout          ;
+; |Timer|Number_s[2][3]~feeder                                               ; |Timer|Number_s[2][3]~feeder                                               ; combout          ;
+; |Timer|Number_s[0][0]~feeder                                               ; |Timer|Number_s[0][0]~feeder                                               ; combout          ;
+; |Timer|Number_s[0][3]~feeder                                               ; |Timer|Number_s[0][3]~feeder                                               ; combout          ;
+; |Timer|Number_s[1][0]~feeder                                               ; |Timer|Number_s[1][0]~feeder                                               ; combout          ;
+; |Timer|Number_s[1][2]~feeder                                               ; |Timer|Number_s[1][2]~feeder                                               ; combout          ;
+; |Timer|Number_s[1][3]~feeder                                               ; |Timer|Number_s[1][3]~feeder                                               ; combout          ;
+; |Timer|Number_s[3][3]~feeder                                               ; |Timer|Number_s[3][3]~feeder                                               ; combout          ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 8.1 Build 163 10/28/2008 SJ Full Version
+    Info: Processing started: Wed Dec 08 17:06:15 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Timer -c Timer
+Info: Using vector source file "D:/Mosey/Studying/”нивер/ћагистратура/1 семестр/языки описани аппаратуры/27.10/Timer/Template/Timer_waveform.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of Timer_waveform.vwf called Timer.sim_ori.vwf has been created in the db folder
+Info: System task: Warning : Invalid transition to 'X' detected on CycloneII PLL input clk. This edge will be ignored.
+Info: System task: Time: 0  Instance: PLL|altpll_component|pll
+Info: System task:  Note : CycloneII PLL is enabled
+Info: System task: Time: 0  Instance: PLL|altpll_component|pll
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: System task: Warning : Input clock freq. is not within VCO range. PLL may not lock
+Info: System task: Time: 18518  Instance: PLL|altpll_component|pll
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       6.32 %
+Info: Number of transitions in simulation is 735
+Info: Vector file Timer_waveform.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Wed Dec 08 17:06:15 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,265 @@
+|Timer
+clk_i => Seven_Segment:Indicator:3:SS_Display.clock
+clk_i => Seven_Segment:Indicator:2:SS_Display.clock
+clk_i => Seven_Segment:Indicator:1:SS_Display.clock
+clk_i => Seven_Segment:Indicator:0:SS_Display.clock
+clk_i => switch_s.CLK
+clk_i => prescaler_s[0].CLK
+clk_i => prescaler_increment_s.CLK
+clk_i => btn_0_s.CLK
+clk_i => btn_1_s.CLK
+clk_i => btn_s.CLK
+clk_i => Main_PLL:PLL.inclk0
+SS_Pin[0][0] <= Seven_Segment:Indicator:0:SS_Display.Segment[0]
+SS_Pin[0][1] <= Seven_Segment:Indicator:0:SS_Display.Segment[1]
+SS_Pin[0][2] <= Seven_Segment:Indicator:0:SS_Display.Segment[2]
+SS_Pin[0][3] <= Seven_Segment:Indicator:0:SS_Display.Segment[3]
+SS_Pin[0][4] <= Seven_Segment:Indicator:0:SS_Display.Segment[4]
+SS_Pin[0][5] <= Seven_Segment:Indicator:0:SS_Display.Segment[5]
+SS_Pin[0][6] <= Seven_Segment:Indicator:0:SS_Display.Segment[6]
+SS_Pin[1][0] <= Seven_Segment:Indicator:1:SS_Display.Segment[0]
+SS_Pin[1][1] <= Seven_Segment:Indicator:1:SS_Display.Segment[1]
+SS_Pin[1][2] <= Seven_Segment:Indicator:1:SS_Display.Segment[2]
+SS_Pin[1][3] <= Seven_Segment:Indicator:1:SS_Display.Segment[3]
+SS_Pin[1][4] <= Seven_Segment:Indicator:1:SS_Display.Segment[4]
+SS_Pin[1][5] <= Seven_Segment:Indicator:1:SS_Display.Segment[5]
+SS_Pin[1][6] <= Seven_Segment:Indicator:1:SS_Display.Segment[6]
+SS_Pin[2][0] <= Seven_Segment:Indicator:2:SS_Display.Segment[0]
+SS_Pin[2][1] <= Seven_Segment:Indicator:2:SS_Display.Segment[1]
+SS_Pin[2][2] <= Seven_Segment:Indicator:2:SS_Display.Segment[2]
+SS_Pin[2][3] <= Seven_Segment:Indicator:2:SS_Display.Segment[3]
+SS_Pin[2][4] <= Seven_Segment:Indicator:2:SS_Display.Segment[4]
+SS_Pin[2][5] <= Seven_Segment:Indicator:2:SS_Display.Segment[5]
+SS_Pin[2][6] <= Seven_Segment:Indicator:2:SS_Display.Segment[6]
+SS_Pin[3][0] <= Seven_Segment:Indicator:3:SS_Display.Segment[0]
+SS_Pin[3][1] <= Seven_Segment:Indicator:3:SS_Display.Segment[1]
+SS_Pin[3][2] <= Seven_Segment:Indicator:3:SS_Display.Segment[2]
+SS_Pin[3][3] <= Seven_Segment:Indicator:3:SS_Display.Segment[3]
+SS_Pin[3][4] <= Seven_Segment:Indicator:3:SS_Display.Segment[4]
+SS_Pin[3][5] <= Seven_Segment:Indicator:3:SS_Display.Segment[5]
+SS_Pin[3][6] <= Seven_Segment:Indicator:3:SS_Display.Segment[6]
+cnt_sec_0x_o <= cnt_sec_0x_carry_s.DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_0x_o_val[0] <= cnt_sec_0x_s[0].DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_0x_o_val[1] <= cnt_sec_0x_s[1].DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_0x_o_val[2] <= cnt_sec_0x_s[2].DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_0x_o_val[3] <= cnt_sec_0x_s[3].DB_MAX_OUTPUT_PORT_TYPE
+cnt_sec_x0_o <= cnt_sec_xx_carry_s.DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_x0_o_val[0] <= cnt_sec_x0_s[0].DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_x0_o_val[1] <= cnt_sec_x0_s[1].DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_x0_o_val[2] <= cnt_sec_x0_s[2].DB_MAX_OUTPUT_PORT_TYPE
+cur_sec_x0_o_val[3] <= cnt_sec_x0_s[3].DB_MAX_OUTPUT_PORT_TYPE
+cnt_min_0x_o <= cnt_min_0x_carry_s.DB_MAX_OUTPUT_PORT_TYPE
+cur_min_0x_o_val[0] <= cnt_min_0x_s[0].DB_MAX_OUTPUT_PORT_TYPE
+cur_min_0x_o_val[1] <= cnt_min_0x_s[1].DB_MAX_OUTPUT_PORT_TYPE
+cur_min_0x_o_val[2] <= cnt_min_0x_s[2].DB_MAX_OUTPUT_PORT_TYPE
+cur_min_0x_o_val[3] <= cnt_min_0x_s[3].DB_MAX_OUTPUT_PORT_TYPE
+cnt_min_x0_o <= cnt_min_xx_carry_s.DB_MAX_OUTPUT_PORT_TYPE
+cur_min_x0_o_val[0] <= cnt_min_x0_s[0].DB_MAX_OUTPUT_PORT_TYPE
+cur_min_x0_o_val[1] <= cnt_min_x0_s[1].DB_MAX_OUTPUT_PORT_TYPE
+cur_min_x0_o_val[2] <= cnt_min_x0_s[2].DB_MAX_OUTPUT_PORT_TYPE
+cur_min_x0_o_val[3] <= cnt_min_x0_s[3].DB_MAX_OUTPUT_PORT_TYPE
+button_1_1 => btn_0_s.DATAIN
+switch_1_1 => switch_s.DATAIN
+ref_freq_vp <= Main_PLL:PLL.c0
+
+
+|Timer|Main_PLL:PLL
+inclk0 => altpll:altpll_component.inclk[0]
+c0 <= altpll:altpll_component.clk[0]
+
+
+|Timer|Main_PLL:PLL|altpll:altpll_component
+inclk[0] => pll.CLK
+inclk[1] => ~NO_FANOUT~
+fbin => ~NO_FANOUT~
+pllena => ~NO_FANOUT~
+clkswitch => ~NO_FANOUT~
+areset => ~NO_FANOUT~
+pfdena => ~NO_FANOUT~
+clkena[0] => ~NO_FANOUT~
+clkena[1] => ~NO_FANOUT~
+clkena[2] => ~NO_FANOUT~
+clkena[3] => ~NO_FANOUT~
+clkena[4] => ~NO_FANOUT~
+clkena[5] => ~NO_FANOUT~
+extclkena[0] => ~NO_FANOUT~
+extclkena[1] => ~NO_FANOUT~
+extclkena[2] => ~NO_FANOUT~
+extclkena[3] => ~NO_FANOUT~
+scanclk => ~NO_FANOUT~
+scanclkena => ~NO_FANOUT~
+scanaclr => ~NO_FANOUT~
+scanread => ~NO_FANOUT~
+scanwrite => ~NO_FANOUT~
+scandata => ~NO_FANOUT~
+phasecounterselect[0] => ~NO_FANOUT~
+phasecounterselect[1] => ~NO_FANOUT~
+phasecounterselect[2] => ~NO_FANOUT~
+phasecounterselect[3] => ~NO_FANOUT~
+phaseupdown => ~NO_FANOUT~
+phasestep => ~NO_FANOUT~
+configupdate => ~NO_FANOUT~
+fbmimicbidir <= <GND>
+clk[0] <= clk[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+clk[1] <= <GND>
+clk[2] <= <GND>
+clk[3] <= <GND>
+clk[4] <= <GND>
+clk[5] <= <GND>
+extclk[0] <= <GND>
+extclk[1] <= <GND>
+extclk[2] <= <GND>
+extclk[3] <= <GND>
+clkbad[0] <= <GND>
+clkbad[1] <= <GND>
+enable1 <= <GND>
+enable0 <= <GND>
+activeclock <= <GND>
+clkloss <= <GND>
+locked <= <GND>
+scandataout <= <GND>
+scandone <= <GND>
+sclkout0 <= <GND>
+sclkout1 <= sclkout1~0.DB_MAX_OUTPUT_PORT_TYPE
+phasedone <= <GND>
+vcooverrange <= <GND>
+vcounderrange <= <GND>
+fbout <= <GND>
+
+
+|Timer|Seven_Segment:\Indicator:0:SS_Display
+clock => lpm_shiftreg:Data_Reg.clock
+enable => lpm_shiftreg:Data_Reg.enable
+Number[0] => lpm_shiftreg:Data_Reg.data[0]
+Number[1] => lpm_shiftreg:Data_Reg.data[1]
+Number[2] => lpm_shiftreg:Data_Reg.data[2]
+Number[3] => lpm_shiftreg:Data_Reg.data[3]
+Segment[0] <= Segment[0]~6.DB_MAX_OUTPUT_PORT_TYPE
+Segment[1] <= Segment[1]~5.DB_MAX_OUTPUT_PORT_TYPE
+Segment[2] <= Segment[2]~4.DB_MAX_OUTPUT_PORT_TYPE
+Segment[3] <= Segment[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+Segment[4] <= Segment[4]~2.DB_MAX_OUTPUT_PORT_TYPE
+Segment[5] <= Segment[5]~1.DB_MAX_OUTPUT_PORT_TYPE
+Segment[6] <= Segment[6]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Timer|Seven_Segment:\Indicator:0:SS_Display|lpm_shiftreg:Data_Reg
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Timer|Seven_Segment:\Indicator:1:SS_Display
+clock => lpm_shiftreg:Data_Reg.clock
+enable => lpm_shiftreg:Data_Reg.enable
+Number[0] => lpm_shiftreg:Data_Reg.data[0]
+Number[1] => lpm_shiftreg:Data_Reg.data[1]
+Number[2] => lpm_shiftreg:Data_Reg.data[2]
+Number[3] => lpm_shiftreg:Data_Reg.data[3]
+Segment[0] <= Segment[0]~6.DB_MAX_OUTPUT_PORT_TYPE
+Segment[1] <= Segment[1]~5.DB_MAX_OUTPUT_PORT_TYPE
+Segment[2] <= Segment[2]~4.DB_MAX_OUTPUT_PORT_TYPE
+Segment[3] <= Segment[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+Segment[4] <= Segment[4]~2.DB_MAX_OUTPUT_PORT_TYPE
+Segment[5] <= Segment[5]~1.DB_MAX_OUTPUT_PORT_TYPE
+Segment[6] <= Segment[6]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Timer|Seven_Segment:\Indicator:1:SS_Display|lpm_shiftreg:Data_Reg
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Timer|Seven_Segment:\Indicator:2:SS_Display
+clock => lpm_shiftreg:Data_Reg.clock
+enable => lpm_shiftreg:Data_Reg.enable
+Number[0] => lpm_shiftreg:Data_Reg.data[0]
+Number[1] => lpm_shiftreg:Data_Reg.data[1]
+Number[2] => lpm_shiftreg:Data_Reg.data[2]
+Number[3] => lpm_shiftreg:Data_Reg.data[3]
+Segment[0] <= Segment[0]~6.DB_MAX_OUTPUT_PORT_TYPE
+Segment[1] <= Segment[1]~5.DB_MAX_OUTPUT_PORT_TYPE
+Segment[2] <= Segment[2]~4.DB_MAX_OUTPUT_PORT_TYPE
+Segment[3] <= Segment[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+Segment[4] <= Segment[4]~2.DB_MAX_OUTPUT_PORT_TYPE
+Segment[5] <= Segment[5]~1.DB_MAX_OUTPUT_PORT_TYPE
+Segment[6] <= Segment[6]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Timer|Seven_Segment:\Indicator:2:SS_Display|lpm_shiftreg:Data_Reg
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Timer|Seven_Segment:\Indicator:3:SS_Display
+clock => lpm_shiftreg:Data_Reg.clock
+enable => lpm_shiftreg:Data_Reg.enable
+Number[0] => lpm_shiftreg:Data_Reg.data[0]
+Number[1] => lpm_shiftreg:Data_Reg.data[1]
+Number[2] => lpm_shiftreg:Data_Reg.data[2]
+Number[3] => lpm_shiftreg:Data_Reg.data[3]
+Segment[0] <= Segment[0]~6.DB_MAX_OUTPUT_PORT_TYPE
+Segment[1] <= Segment[1]~5.DB_MAX_OUTPUT_PORT_TYPE
+Segment[2] <= Segment[2]~4.DB_MAX_OUTPUT_PORT_TYPE
+Segment[3] <= Segment[3]~3.DB_MAX_OUTPUT_PORT_TYPE
+Segment[4] <= Segment[4]~2.DB_MAX_OUTPUT_PORT_TYPE
+Segment[5] <= Segment[5]~1.DB_MAX_OUTPUT_PORT_TYPE
+Segment[6] <= Segment[6]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Timer|Seven_Segment:\Indicator:3:SS_Display|lpm_shiftreg:Data_Reg
+clock => dffs[3].CLK
+clock => dffs[2].CLK
+clock => dffs[1].CLK
+clock => dffs[0].CLK
+enable => dffs[3].ENA
+enable => dffs[2].ENA
+enable => dffs[1].ENA
+enable => dffs[0].ENA
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+q[0] <= dffs[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= dffs[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= dffs[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= dffs[3].DB_MAX_OUTPUT_PORT_TYPE
+shiftout <= shiftout~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

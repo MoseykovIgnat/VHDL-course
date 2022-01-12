@@ -1,0 +1,35 @@
+TITLE "Seven Segment Display function";
+
+include "LPM_SHIFTREG.inc";
+
+
+SUBDESIGN Seven_Segment
+(
+   Clock          : input; -- 
+   Enable         : input; -- сигнал изменения данных на индекаторе 
+   Number[3..0]   : input; -- 
+   Segment[6..0]  : output;
+)
+VARIABLE
+   Data_Reg       : LPM_SHIFTREG with (lpm_width=4, lpm_direction="UNUSED");  -- регистр входных данных
+   
+BEGIN
+
+   Data_Reg.(data[],clock,enable,load) = (Number[],Clock,Enable,VCC); 
+    
+   CASE Data_Reg.q[3..0] IS  
+      WHEN 0 =>   Segment[6..0]    = B"1000000";  
+      WHEN 1 =>   Segment[6..0]    = B"1111001"; 
+      WHEN 2 =>   Segment[6..0]    = B"0100100"; 
+      WHEN 3 =>   Segment[6..0]    = B"0110000"; 
+      WHEN 4 =>   Segment[6..0]    = B"0011001"; 
+      WHEN 5 =>   Segment[6..0]    = B"0010010"; 
+      WHEN 6 =>   Segment[6..0]    = B"0000010"; 
+      WHEN 7 =>   Segment[6..0]    = B"1111000"; 
+      WHEN 8 =>   Segment[6..0]    = B"0000000"; 
+      WHEN 9 =>   Segment[6..0]    = B"0010000";       
+      WHEN OTHERS => Segment[6..0] = B"1111111"; 
+   END CASE;
+   
+END;
+   
