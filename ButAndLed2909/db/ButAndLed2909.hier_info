@@ -1,0 +1,16 @@
+|ButAndLed2909
+clk_i => t0.CLK
+clk_i => t1.CLK
+clk_i => t3.CLK
+clk_i => light_switch.CLK
+button_0_i => t3.ENA
+button_0_i => t1.ENA
+button_0_i => t0.ENA
+button_1_i => ~NO_FANOUT~
+button_2_i => LED_2_o.DATAIN
+button_2_i => LED_1_o.DATAIN
+LED_0_o <= light_switch.DB_MAX_OUTPUT_PORT_TYPE
+LED_1_o <= button_2_i.DB_MAX_OUTPUT_PORT_TYPE
+LED_2_o <= button_2_i.DB_MAX_OUTPUT_PORT_TYPE
+
+
